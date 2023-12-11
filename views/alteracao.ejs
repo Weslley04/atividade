@@ -1,0 +1,11 @@
+<!-- alteracao.ejs -->
+<h1>Alteração do Produto</h1>
+<form action="/realizarAlteracao/<%= produto.id %>" method="post">
+  <label for="nome">Novo Nome:</label>
+  <input type="text" id="nome" name="nome" />
+
+  <label for="valor">Novo Valor:</label>
+  <input type="text" id="valor" name="valor" />
+
+  <button type="submit">Realizar Alteração</button>
+</form>

@@ -1,0 +1,21 @@
+<!-- resultados.ejs -->
+<h1>Resultados da Busca</h1>
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Nome</th>
+    <th>Valor</th>
+    <th>Ações</th>
+  </tr>
+  <% for(var i = 0; i < produtos.length; i++) { %>
+    <tr>
+      <td><%= produtos[i].id %></td>
+      <td><%= produtos[i].nome %></td>
+      <td><%= produtos[i].valor %></td>
+      <td>
+        <a href="/alterar/<%= produtos[i].id %>"><img src="/imagens/editar.png" alt="Editar" /></a>
+        <a href="/excluir/<%= produtos[i].id %>"><img src="/imagens/excluir.png" alt="Excluir" /></a>
+      </td>
+    </tr>
+  <% } %>
+</table>
